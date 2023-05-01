@@ -1,0 +1,9 @@
+/** @format */
+
+/* * Container to hold all elements together */
+.container {
+  @apply h-full w-full;
+  background-image: url("/hand.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
