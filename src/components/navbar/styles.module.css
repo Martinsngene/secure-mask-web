@@ -1,0 +1,10 @@
+/** @format */
+/* Navbar Container */
+.container {
+  @apply fixed top-[2.5rem] left-[2.5rem] border border-black h-[50px] w-[60%];
+}
+
+/* Logo Container */
+.logo_container {
+  @apply flex items-center justify-center w-[20%];
+}

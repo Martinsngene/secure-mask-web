@@ -1,9 +1,25 @@
 /** @format */
 
 /* * Container to hold all elements together */
-.container {
+.hand_container {
   @apply h-full w-full;
   background-image: url("/hand.svg");
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.hero_container {
+  @apply bg-white;
+}
+
+.header {
+  @apply font-[200] text-[56px] leading-[71px] text-[#1D1D1C] max-w-[720px];
+}
+
+.imageContainer {
+  @apply my-4;
+}
+
+.welcomeText {
+  @apply font-[400] text-[16px] leading-[22.4px] text-[#1D1D1C] max-w-[395px];
 }
