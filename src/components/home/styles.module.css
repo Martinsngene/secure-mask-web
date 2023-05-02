@@ -2,14 +2,14 @@
 
 /* * Container to hold all elements together */
 .hand_container {
-  @apply h-full w-full;
+  @apply relative h-full w-full;
   background-image: url("/hand.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .hero_container {
-  @apply bg-white;
+  @apply bg-transparent;
 }
 
 .header {
@@ -22,4 +22,8 @@
 
 .welcomeText {
   @apply font-[400] text-[16px] leading-[22.4px] text-[#1D1D1C] max-w-[395px];
+}
+
+.btnContainer {
+  @apply flex items-center justify-between max-w-[300px] mt-8;
 }

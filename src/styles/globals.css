@@ -27,3 +27,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.container {
+  background-image: url("/circles.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}

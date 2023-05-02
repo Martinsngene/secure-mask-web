@@ -1,10 +1,20 @@
 /** @format */
 /* Navbar Container */
 .container {
-  @apply fixed top-[2.5rem] left-[2.5rem] border border-black h-[50px] w-[60%];
+  @apply fixed flex items-center justify-between top-[2.5rem] left-[2.5rem] h-[50px] w-[60%] pl-[4rem];
 }
 
 /* Logo Container */
 .logo_container {
   @apply flex items-center justify-center w-[20%];
+}
+
+/* Logo */
+.logo {
+  @apply text-[1rem] md:text-[1.5rem] font-semibold ml-2;
+}
+
+/* Links Container */
+.links_container {
+  @apply text-[#1D1D1C] font-medium flex items-center justify-between w-[50%];
 }

@@ -4,6 +4,7 @@ import React from "react";
 
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { Button } from "../buttons";
 
 const Hero = () => {
   return (
@@ -18,6 +19,10 @@ const Hero = () => {
         Simple transfers, payments for utilities, functional statemement, card
         settings, for which you used to have to go to the branch online-banking
       </p>
+      <div className={styles.btnContainer}>
+        <Button label='Open your account' isFilled />
+        <Button label='Sign in' isFilled={false} />
+      </div>
     </div>
   );
 };
