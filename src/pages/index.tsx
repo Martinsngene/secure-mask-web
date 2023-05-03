@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={`container w-full h-[100vh] pl-[4rem] flex ${inter.className}`}>
+      className={`container mx-auto w-full h-[100vh] md:pl-[4rem] flex ${inter.className}`}>
       <Navbar />
-      <div className='w-[55%] h-full flex items-center justify-center'>
+      <div className='w-full md:w-[55%] h-full flex items-center justify-center'>
         <Hero />
       </div>
-      <div className='w-[45%] h-[100vh]'>
+      <div className='hidden md:block w-[45%] h-[100vh]'>
         <HandWithCard />
       </div>
     </main>
