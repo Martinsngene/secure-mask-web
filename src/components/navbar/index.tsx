@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 import { NavItems } from "../constants";
 import Link from "next/link";
 import Menu from "../menu";
+import Logo from "../logo";
 
 const Navbar = () => {
   // Menu useState to hide and show the menu component
@@ -17,10 +18,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       {/* Logo */}
-      <div className={styles.logo_container}>
-        <Image src='/logo.svg' alt='logo' width={25} height={325} />
-        <div className={styles.brand}>SecureMask</div>
-      </div>
+      <Logo />
       {/* Navigation Links */}
       <div className={styles.links_container}>
         {NavItems.map((item, index) => (

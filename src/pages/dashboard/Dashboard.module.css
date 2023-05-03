@@ -1,0 +1,43 @@
+/** @format */
+/* Dashboard Container */
+.dashboard_container {
+  @apply h-full md:h-[100vh] w-full flex;
+}
+
+/* Dashboard Sidebar */
+.dashboard_sidebar {
+  @apply py-4 px-4 bg-[#1D1D1C] w-[15%] rounded-tr-[1.5rem] rounded-br-[1.5rem];
+}
+
+/* Sidebar Items */
+.link_item_container {
+  @apply text-white flex items-center w-[200px];
+}
+
+/* Link Text */
+.link_text {
+  @apply text-white font-medium my-4 ml-4;
+}
+
+/* Sidebar Items Groups */
+.group_items_container {
+  @apply pt-4 flex flex-col items-center h-[90%] justify-between;
+}
+.sidebar_item_one,
+.sidebar_item_two {
+  @apply w-full h-[15%] px-2 my-2 flex flex-col items-center justify-around;
+}
+
+.sidebar_item_two {
+  @apply border-t border-t-[#9598A0] pt-6;
+}
+
+/* Logo Container */
+.logo_container {
+  @apply bg-white p-3 rounded-lg;
+}
+
+/* Dashboard Main Page */
+.dashboard_mainpage {
+  @apply bg-white w-[85%] h-full;
+}

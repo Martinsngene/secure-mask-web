@@ -4,20 +4,6 @@
   @apply z-10 fixed flex items-center justify-between top-[0.5rem] md:top-[2.5rem] right-0 left-0 md:left-[2.5rem] h-[50px] w-full md:w-[60%] px-6 md:pl-[4rem];
 }
 
-/* Logo Container */
-.logo_container {
-  @apply flex items-center justify-center md:w-[20%];
-}
-
-/* .logo_icon {
-  @apply 
-} */
-
-/* Logo */
-.brand {
-  @apply text-[0.8rem] md:text-[1.2rem] font-semibold ml-2;
-}
-
 /* Links Container */
 .links_container {
   @apply text-[#1D1D1C] font-medium hidden md:flex items-center justify-between lg:w-[60%] xl:w-[50%];
