@@ -1,0 +1,21 @@
+/** @format */
+/* Card Container */
+.card_container {
+  @apply w-fit relative text-black;
+}
+
+/* Card details groups for better positioning */
+.card_details_group_one {
+  @apply flex items-center justify-between top-[15%] left-[8%] absolute w-[85%];
+}
+.card_name {
+  @apply text-lg text-white;
+}
+
+.card_details_group_two {
+  @apply absolute top-[50%] left-[7.5%];
+}
+
+.card_address {
+  @apply text-sm font-medium text-white;
+}

@@ -1,9 +1,10 @@
 /** @format */
 
 // Interface to declare datatypes for buttons
-export interface ButtonPropsInterface {
+export interface ButtonPropsI {
   label: string;
   isFilled: boolean;
+  src: string;
 }
 
 // Interface for Link Items datatypes. Used in Dashboard

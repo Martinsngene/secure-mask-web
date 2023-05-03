@@ -4,9 +4,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./Dashboard.module.css";
+import styles from "./styles.module.css";
 import Logo from "@/components/logo";
 import { LinkItemPropsI } from "@/components/interface";
+import { AddNewCardBtn } from "@/components/buttons";
+import Card from "@/components/cards";
 
 const Dashboard = () => {
   return (
@@ -39,7 +41,10 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className={styles.dashboard_mainpage}></div>
+      <div className={styles.dashboard_mainpage}>
+        <AddNewCardBtn />
+        <Card />
+      </div>
     </div>
   );
 };

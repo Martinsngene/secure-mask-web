@@ -6,7 +6,7 @@
 
 /* Dashboard Sidebar */
 .dashboard_sidebar {
-  @apply py-4 px-4 bg-[#1D1D1C] w-[15%] rounded-tr-[1.5rem] rounded-br-[1.5rem];
+  @apply hidden lg:block py-4 px-4 bg-[#1D1D1C] w-[15%] rounded-tr-[1.5rem] rounded-br-[1.5rem];
 }
 
 /* Sidebar Items */
@@ -39,5 +39,5 @@
 
 /* Dashboard Main Page */
 .dashboard_mainpage {
-  @apply bg-white w-[85%] h-full;
+  @apply p-12  bg-white w-[85%] h-full;
 }
