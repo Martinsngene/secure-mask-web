@@ -13,4 +13,10 @@ export interface LinkItemPropsI {
   link_text: string;
   href: string;
   src: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+// Interface for the Cards
+export interface CardPropsI {
+  isHome: boolean;
 }

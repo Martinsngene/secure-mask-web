@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
 }
 
+/* Card Container */
+.card_container {
+  @apply absolute top-[23%] left-[13.5%];
+}
+
 .hero_container {
   @apply bg-transparent;
 }

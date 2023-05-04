@@ -3,12 +3,14 @@
 import React from "react";
 
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Card from "../cards";
 
 const HandWithCard = () => {
   return (
     <div className={`${styles.hand_container}`}>
-      {/* <Image src='/hand.svg' alt='hand image' fill /> */}
+      <div className={styles.card_container}>
+        <Card isHome={false} />
+      </div>
     </div>
   );
 };
