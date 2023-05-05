@@ -42,3 +42,26 @@ export const AddNewCardBtn = () => {
     </button>
   );
 };
+
+// Sign in with Google Button
+export const SignInWithGoogleBtn = ({ label }: ButtonPropsI) => {
+  return (
+    <button className={styles.google_btn}>
+      <Image
+        src='/google.svg'
+        alt='google icon'
+        width={32}
+        height={32}
+        className='mr-3'
+      />
+      {label}
+    </button>
+  );
+};
+
+// Submit Button
+export const SubmitBtn = ({ label, className }: ButtonPropsI) => {
+  return (
+    <button className={`${className} ${styles.submit_btn}`}>{label}</button>
+  );
+};

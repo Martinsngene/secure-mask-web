@@ -1,7 +1,7 @@
 /** @format */
 /* Logo Container */
 .logo_container {
-  @apply flex items-center justify-center;
+  @apply flex;
 }
 
 /* Logo */
