@@ -18,3 +18,26 @@
 .transaction_history_grid {
   @apply grid grid-cols-4 gap-[5rem];
 }
+
+.transaction_history_grid div {
+  @apply w-[275px];
+}
+
+/* Table Head, Columns */
+.table_column {
+  @apply text-xl text-[#6B6F7B] font-medium;
+}
+
+/* Table body, Rows */
+.table_row {
+  @apply text-sm text-[#111] font-semibold;
+}
+
+/* Filter and Search Container Styles */
+.filter_container {
+  @apply flex items-center justify-between my-6 w-[60%];
+}
+
+.filter_container > div {
+  @apply w-[45%];
+}

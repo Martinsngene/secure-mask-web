@@ -22,3 +22,25 @@ export interface CardPropsI {
   cardType: string;
   cardBg: string;
 }
+
+// Interface for CustomInputs
+export interface CustomInputPropsI {
+  label?: string;
+  id: string;
+  htmlFor: string;
+  type: string;
+  inputValue?: string;
+  placeHolder: string;
+  containerStyles?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+// Interface for CustomSelect
+export interface CustomSelectPropsI {
+  id?: string;
+  defaultValue: string;
+  itemsList: string[];
+  label?: string;
+  labelStyles?: string;
+  containerStyles?: string;
+}

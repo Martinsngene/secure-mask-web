@@ -3,40 +3,63 @@
 import React from "react";
 
 import styles from "./styles.module.css";
+import Input from "../customInput";
+import Select from "../customSelect";
+import { CardTypes, TransactionStatus } from "../constants";
 
 const Transactions = () => {
   return (
     <div>
       <h2 className={styles.header}>Transactions</h2>
+      <div className={styles.filter_container}>
+        <div>
+          <Input
+            type='text'
+            placeHolder='Search'
+            id='search'
+            htmlFor='search'
+            label='Search transactions'
+          />
+        </div>
+        <div>
+          <Select
+            label='Filter by status'
+            defaultValue='All'
+            itemsList={TransactionStatus}
+          />
+        </div>
+      </div>
       <div className={styles.transactions_container}>
-        {/* Table Headers, Columns */}
+        {/* Table Heads, Columns */}
         <div className={styles.transaction_history_grid}>
-          <div className='bg-red-500 w-[275px]'>
-            <h3>Card Name</h3>
+          <div>
+            <h3 className={styles.table_column}>Card Name</h3>
           </div>
-          <div className='bg-emerald-500 w-[275px]'>
-            <h3>Status</h3>
+          <div>
+            <h3 className={styles.table_column}>Status</h3>
           </div>
-          <div className='bg-blue-500 w-[275px]'>
-            <h3>Date</h3>
+          <div>
+            <h3 className={styles.table_column}>Date</h3>
           </div>
-          <div className='bg-yellow-500 w-[275px]'>
-            <h3>Description</h3>
+          <div>
+            <h3 className={styles.table_column}>Description</h3>
           </div>
         </div>
         {/* Tables Items, Rows */}
         <div className={styles.transaction_history_grid}>
-          <div className='bg-red-500 w-[275px]'>
-            <div>Jane Doe</div>
+          <div>
+            <div className={styles.table_row}>Jane Doe</div>
           </div>
-          <div className='bg-emerald-500 w-[275px]'>
-            <div>Pending</div>
+          <div>
+            <div className={styles.table_row}>Pending</div>
           </div>
-          <div className='bg-blue-500 w-[275px]'>
-            <div>{Date.now().toLocaleString()}</div>
+          <div>
+            <div className={styles.table_row}>
+              {Date.now().toLocaleString()}
+            </div>
           </div>
-          <div className='bg-yellow-500 w-[275px]'>
-            <div>Shopped at eBay</div>
+          <div>
+            <div className={styles.table_row}>Shopped at eBay</div>
           </div>
         </div>
       </div>
