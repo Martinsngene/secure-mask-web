@@ -1,0 +1,20 @@
+/** @format */
+
+/* Header */
+.header {
+  @apply text-[1rem] md:text-[1.75rem] font-bold leading-[20px] md:leading-[34px] text-[#111];
+}
+
+/* Cards Route Styles */
+.cards_container {
+  @apply h-full w-full flex items-center flex-wrap;
+}
+
+/* Transaction Route Styles */
+.transactions_container {
+  @apply h-full w-full flex items-center flex-wrap;
+}
+
+.transaction_history_grid {
+  @apply grid grid-cols-4 gap-[5rem];
+}

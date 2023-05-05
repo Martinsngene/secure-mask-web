@@ -7,11 +7,11 @@ import styles from "./styles.module.css";
 import Logo from "../logo";
 import { CardPropsI } from "../interface";
 
-const Card = ({ isHome = true }: CardPropsI) => {
+const Card = ({ isHome, cardBg, cardType }: CardPropsI) => {
   return (
     <div className={styles.card_container}>
       <Image
-        src='/card_template_home.svg'
+        src={cardBg}
         alt='Card template design'
         width={395}
         height={184}
@@ -28,7 +28,7 @@ const Card = ({ isHome = true }: CardPropsI) => {
           />
         </button>
       </div>
-      {isHome && (
+      {!isHome && (
         <div className={styles.card_details_group_two}>
           <p className={styles.card_address}>
             0x85807DC7cD410EFeFBA78e90087cc3ce9b9b7D0D
@@ -41,12 +41,7 @@ const Card = ({ isHome = true }: CardPropsI) => {
           <Logo />
         </div>
         <div className={styles.card_type}>
-          <Image
-            src='/mastercard.svg'
-            alt='type of card'
-            width={60}
-            height={15}
-          />
+          <Image src={cardType} alt='type of card' width={60} height={15} />
         </div>
       </div>
     </div>

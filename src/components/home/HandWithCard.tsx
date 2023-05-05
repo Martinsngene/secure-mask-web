@@ -3,13 +3,17 @@
 import React from "react";
 
 import styles from "./styles.module.css";
-import Card from "../cards";
+import Card from "../card";
 
 const HandWithCard = () => {
   return (
     <div className={`${styles.hand_container}`}>
       <div className={styles.card_container}>
-        <Card isHome={false} />
+        <Card
+          cardType='/visa.svg'
+          cardBg='/card_template_home.svg'
+          isHome={true}
+        />
       </div>
     </div>
   );

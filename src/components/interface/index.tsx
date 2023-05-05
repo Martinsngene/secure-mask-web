@@ -19,4 +19,6 @@ export interface LinkItemPropsI {
 // Interface for the Cards
 export interface CardPropsI {
   isHome: boolean;
+  cardType: string;
+  cardBg: string;
 }

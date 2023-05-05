@@ -39,5 +39,5 @@
 
 /* Dashboard Main Page */
 .dashboard_mainpage {
-  @apply p-12  bg-white w-[85%] h-full;
+  @apply p-12  bg-white w-[85%];
 }
