@@ -23,5 +23,5 @@
 }
 
 .card_address {
-  @apply text-sm font-medium text-white;
+  @apply text-[0.625rem] leading-4 font-medium text-white;
 }
