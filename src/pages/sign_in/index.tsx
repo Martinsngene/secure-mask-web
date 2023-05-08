@@ -35,7 +35,7 @@ const SignIn = () => {
         </div>
         <div className={styles.cta_container}>
           <p className={styles.cta}>Don&apos;t have an account? </p>
-          <Link href='/signup' passHref>
+          <Link href='/sign_up' passHref>
             <p className={styles.signup_text}> Sign Up</p>
           </Link>
         </div>

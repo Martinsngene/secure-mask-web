@@ -12,7 +12,7 @@
 /* Media query for form container box shadow */
 @media screen and (min-width: 1024px) {
   .form_container {
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   }
 }
 

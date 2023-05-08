@@ -20,8 +20,8 @@ const Hero = () => {
         settings, for which you used to have to go to the branch online-banking
       </p>
       <div className={styles.btnContainer}>
-        <Button label='Open your account' isFilled />
-        <Button label='Sign in' isFilled={false} />
+        <Button href='/sign_up' label='Open your account' isFilled />
+        <Button href='/sign_in' label='Sign in' isFilled={false} />
       </div>
     </div>
   );

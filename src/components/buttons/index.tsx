@@ -5,12 +5,15 @@ import React from "react";
 import { ButtonPropsI } from "../interface";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 // Button with styles for filled and outline
-export const Button = ({ label, isFilled }: ButtonPropsI) => {
+export const Button = ({ label, isFilled, href }: ButtonPropsI) => {
   return (
     <button className={`${isFilled ? styles.filled_btn : styles.outlined_btn}`}>
-      {label}
+      <Link href={`${href}`} passHref>
+        {label}
+      </Link>
       {!isFilled && (
         <Image
           src='/angle_right.svg'
