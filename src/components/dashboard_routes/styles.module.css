@@ -41,3 +41,12 @@
 .filter_container > div {
   @apply w-[45%];
 }
+
+/* Profile Route Styles */
+.profile_image_container {
+  @apply relative bg-[#6B6F7B] w-[150px] h-[150px] rounded-full mt-6;
+}
+
+/* .edit_icon_container {
+  @apply absolute bottom-[10%] right-[20%] w-[30px] h-[30px];
+} */

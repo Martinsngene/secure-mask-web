@@ -5,7 +5,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import Input from "../customInput";
 import Select from "../customSelect";
-import { CardTypes, TransactionStatus } from "../constants";
+import { TransactionStatus } from "../constants";
 
 const Transactions = () => {
   return (

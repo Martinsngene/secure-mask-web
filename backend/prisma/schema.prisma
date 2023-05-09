@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// This model creates a users table in the database
+model Users {
+  id             Int     @id @default(autoincrement())
+  firstName      String?
+  lastName       String?
+  email          String  @unique
+  profilePicture String?
+  cardAddress    String
+  // posts Post[]
+}
+
+// This model creates a transactions table in the database
+model Transactions {
+  id          Int    @id @default(autoincrement())
+  cardName    String
+  Status      String
+  Description String
+  // isPending   Boolean @default(false)
+  // isApproved  Boolean @default(false)
+  // isDeclined  Boolean @default(false)
+  // author    User?   @relation(fields: [authorId], references: [id])
+  // authorId    Int?
+}
