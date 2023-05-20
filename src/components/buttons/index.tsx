@@ -63,8 +63,10 @@ export const SignInWithGoogleBtn = ({ label }: ButtonPropsI) => {
 };
 
 // Submit Button
-export const SubmitBtn = ({ label, className }: ButtonPropsI) => {
+export const SubmitBtn = ({ label, className, onClick }: ButtonPropsI) => {
   return (
-    <button className={`${className} ${styles.submit_btn}`}>{label}</button>
+    <button onClick={onClick} className={`${className} ${styles.submit_btn}`}>
+      {label}
+    </button>
   );
 };

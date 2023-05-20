@@ -9,6 +9,8 @@ import { LinkItemPropsI } from "@/components/interface";
 import Cards from "@/components/dashboard_routes/Cards";
 import Transactions from "@/components/dashboard_routes/Transactions";
 import Profile from "@/components/dashboard_routes/Profile";
+import ProfileEdit from "@/components/dashboard_routes/edit/ProfileEdit";
+import Logout from "@/components/dashboard_routes/Logout";
 
 const Dashboard = () => {
   // useState to control the state of the mainpage
@@ -71,7 +73,7 @@ const Dashboard = () => {
         ) : currentView === 2 ? (
           <Profile />
         ) : (
-          "Logout"
+          <Logout />
         )}
       </div>
     </div>
