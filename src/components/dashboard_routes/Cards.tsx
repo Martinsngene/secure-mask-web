@@ -8,7 +8,7 @@ import { AddNewCardBtn } from "../buttons";
 
 const Cards = () => {
   return (
-    <div>
+    <>
       <h2 className={styles.header}>Cards</h2>
       <div className={styles.cards_container}>
         <Card
@@ -43,7 +43,7 @@ const Cards = () => {
         />
         <AddNewCardBtn />
       </div>
-    </div>
+    </>
   );
 };
 

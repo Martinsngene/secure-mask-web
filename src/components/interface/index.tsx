@@ -19,9 +19,9 @@ export interface ButtonPropsI {
 
 export interface LinkItemPropsI {
   link_text: string;
-  href: string;
+  href?: string;
   src: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 // Interface for the Cards

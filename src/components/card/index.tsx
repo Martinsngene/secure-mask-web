@@ -13,8 +13,8 @@ const Card = ({ isHome, cardBg, cardType }: CardPropsI) => {
       <Image
         src={cardBg}
         alt='Card template design'
-        width={395}
-        height={184}
+        width={350}
+        height={139}
         className='border border-transparent'
       />
       <div className={styles.card_details_group_one}>

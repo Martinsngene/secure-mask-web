@@ -25,27 +25,3 @@
 .welcome_text {
   @apply my-4 text-[0.8rem] md:text-[1rem] font-normal leading-[14px] md:leading-[19px] text-[#6B6F7B];
 }
-
-/* Label */
-.label {
-  @apply font-[400] text-[1rem] lg:text-[1rem] leading-[120%];
-}
-
-/* Input */
-.input {
-  @apply mb-4 lg:text-[1rem] outline-none w-full border border-[#E1E1E1] rounded-lg h-[15px] px-5 py-5;
-}
-
-/*  */
-.cta_container {
-  @apply mt-4 flex items-center;
-}
-/* Call TO Sign Up Text */
-.cta {
-  @apply leading-[16px] text-[#111] mr-4;
-}
-
-/* Sign up Text */
-.signup_text {
-  @apply font-[600] text-[0.875rem] leading-[16px] text-[#111] cursor-pointer underline;
-}

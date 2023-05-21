@@ -9,8 +9,8 @@ import { LinkItemPropsI } from "@/components/interface";
 import Cards from "@/components/dashboard_routes/Cards";
 import Transactions from "@/components/dashboard_routes/Transactions";
 import Profile from "@/components/dashboard_routes/Profile";
-import ProfileEdit from "@/components/dashboard_routes/edit/ProfileEdit";
 import Logout from "@/components/dashboard_routes/Logout";
+import Link from "next/link";
 
 const Dashboard = () => {
   // useState to control the state of the mainpage
@@ -33,14 +33,12 @@ const Dashboard = () => {
             <LinkItem
               onClick={() => updateCurrentView(0)}
               src='/card.svg'
-              href='/'
               link_text='Cards'
             />
 
             {/* List of Transactions */}
             <LinkItem
               src='/transaction.svg'
-              href='/'
               link_text='Transactions'
               onClick={() => updateCurrentView(1)}
             />
@@ -51,17 +49,13 @@ const Dashboard = () => {
             <LinkItem
               onClick={() => updateCurrentView(2)}
               src='/profile.svg'
-              href='/'
               link_text='Profile'
             />
 
             {/* Logout*/}
-            <LinkItem
-              onClick={() => updateCurrentView(3)}
-              src='/logout.svg'
-              href='/'
-              link_text='Logout'
-            />
+            <Link href='/sign_out' passHref>
+              <LinkItem src='/logout.svg' link_text='Logout' />
+            </Link>
           </div>
         </div>
       </div>
@@ -70,10 +64,8 @@ const Dashboard = () => {
           <Cards />
         ) : currentView === 1 ? (
           <Transactions />
-        ) : currentView === 2 ? (
-          <Profile />
         ) : (
-          <Logout />
+          <Profile />
         )}
       </div>
     </div>

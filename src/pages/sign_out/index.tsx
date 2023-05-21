@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "./styles.module.css";
-import { SignInWithGoogleBtn, SubmitBtn } from "@/components/buttons";
+import { SubmitBtn } from "@/components/buttons";
 import Logo from "@/components/logo";
 
 const SignOut = () => {
@@ -14,29 +14,12 @@ const SignOut = () => {
         <div className={styles.logo_container}>
           <Logo />
         </div>
-        <h1 className={styles.header}>Welcome back</h1>
-        <p className={styles.welcome_text}>
-          Welcome back! Please enter your details.
-        </p>
+        <h1 className={styles.header}>You're now logged out</h1>
+        <p className={styles.welcome_text}>We hope you enjoyed our services.</p>
+
         <div>
-          <label className={styles.label} htmlFor='email'>
-            Email
-          </label>
-          <input
-            className={styles.input}
-            id='email'
-            placeholder='Enter your email'
-            type='text'
-          />
-        </div>
-        <div>
-          <SubmitBtn className='mb-8' label='Continue' />
-          <SignInWithGoogleBtn label='Sign in with Google' />
-        </div>
-        <div className={styles.cta_container}>
-          <p className={styles.cta}>Don&apos;t have an account? </p>
-          <Link href='/sign_up' passHref>
-            <p className={styles.signup_text}> Sign Up</p>
+          <Link href='/sign_in' passHref>
+            <SubmitBtn className='mb-8' label='Sign back in' />
           </Link>
         </div>
       </div>
