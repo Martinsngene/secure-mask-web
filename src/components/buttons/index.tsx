@@ -28,9 +28,9 @@ export const Button = ({ label, isFilled, href }: ButtonPropsI) => {
 };
 
 // Button built to add new cards
-export const AddNewCardBtn = () => {
+export const AddNewCardBtn = ({ onClick }: ButtonPropsI) => {
   return (
-    <button className={styles.new_card_btn_container}>
+    <button onClick={onClick} className={styles.new_card_btn_container}>
       <div className={styles.new_card_items_container}>
         <div className={styles.new_card_image}>
           <Image

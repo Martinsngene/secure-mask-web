@@ -3,6 +3,7 @@ require("dotenv").config();
 
 import express, { Application, Request, Response } from "express";
 import mongoose from "mongoose";
+import { auth } from "express-openid-connect";
 
 import Transactions from "./models/Transactions";
 
@@ -16,6 +17,24 @@ const PORT: number = 3001;
 const DB_HOST: string = process.env.DB_URL || "";
 
 app.use(express.json());
+
+// Config object for auth0
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: "http://localhost:3001",
+  clientID: "mmdtOFjm7mH0hjVxnfSSpvPWTsroqQzP",
+  issuerBaseURL: "https://martinium3.us.auth0.com",
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get("/", (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
+});
 
 // GET all transactions route
 app.get("/transactions", async (req: Request, res: Response) => {

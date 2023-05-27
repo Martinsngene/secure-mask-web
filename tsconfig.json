@@ -1,4 +1,4 @@
-{  "compilerOptions": {
+{ "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sm-backend/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/index.ts"],
   "exclude": ["node_modules"]
 }

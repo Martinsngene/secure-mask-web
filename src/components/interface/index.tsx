@@ -8,7 +8,7 @@ export interface PagePropsI {
 // Interface to declare datatypes for buttons
 export interface ButtonPropsI {
   href?: string;
-  label: string;
+  label?: string;
   isFilled?: boolean;
   src?: string;
   className?: string;
@@ -51,4 +51,15 @@ export interface CustomSelectPropsI {
   label?: string;
   labelStyles?: string;
   containerStyles?: string;
+}
+
+// Interface for Modal
+export interface ModalPropsI {
+  children: React.ReactNode;
+}
+
+// Interface for AddNewCard Form
+
+export interface AddNewCardPropsI {
+  closeBtn?: React.MouseEventHandler<HTMLButtonElement>;
 }

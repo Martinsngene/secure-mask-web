@@ -2,7 +2,7 @@
 
 // Navigation Menu items
 export const NavItems = [
-  { name: "Deposit", link: "/" },
+  { name: "How it works", link: "/" },
   { name: "Dashboard", link: "/dashboard" },
   { name: "Demo", link: "/demo" },
 ];
