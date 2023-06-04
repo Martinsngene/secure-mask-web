@@ -29,6 +29,7 @@ export interface CardPropsI {
   isHome: boolean;
   cardType: string;
   cardBg: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 // Interface for CustomInputs

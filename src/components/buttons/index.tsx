@@ -10,20 +10,21 @@ import Link from "next/link";
 // Button with styles for filled and outline
 export const Button = ({ label, isFilled, href }: ButtonPropsI) => {
   return (
-    <button className={`${isFilled ? styles.filled_btn : styles.outlined_btn}`}>
-      <Link href={`${href}`} passHref>
+    <Link href={`${href}`} passHref>
+      <button
+        className={`${isFilled ? styles.filled_btn : styles.outlined_btn}`}>
         {label}
-      </Link>
-      {!isFilled && (
-        <Image
-          src='/angle_right.svg'
-          alt='angle_right'
-          width={10}
-          height={10}
-          className='ml-3'
-        />
-      )}
-    </button>
+        {!isFilled && (
+          <Image
+            src='/angle_right.svg'
+            alt='angle_right'
+            width={10}
+            height={10}
+            className='ml-3'
+          />
+        )}
+      </button>
+    </Link>
   );
 };
 

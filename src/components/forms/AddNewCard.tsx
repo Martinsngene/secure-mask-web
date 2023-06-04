@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import keccak256 from "keccak256";
 
 import styles from "./AddNewCard.module.css";
 import { SubmitBtn } from "@/components/buttons";
@@ -11,12 +12,15 @@ import { CardTypes } from "../constants";
 import { AddNewCardPropsI } from "../interface";
 
 const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
+  const hash = keccak256(
+    Buffer.from("John" + "Doe" + "08/23" + "Visa")
+  ).toString("hex");
+  console.log(hash);
   return (
     <div className={styles.container}>
       <div className={styles.form_container}>
         <div className={styles.logo_container}>
           <Logo />
-
           <button onClick={closeBtn}>
             <Image
               src='/close.svg'

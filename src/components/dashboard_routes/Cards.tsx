@@ -7,54 +7,49 @@ import Card from "../card";
 import { AddNewCardBtn } from "../buttons";
 import Modal from "../modal";
 import AddNewCard from "../forms/AddNewCard";
+import CardDetails from "../forms/CardDetails";
+import { testCards } from "../test-data";
 
 const Cards = () => {
-  const [toggleModal, setToggleModal] = useState(false);
+  const [addCard, setAddCard] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   const showModal = (val: boolean) => {
-    setToggleModal(val);
+    setAddCard(val);
+  };
+
+  const showCardDetails = (val: boolean) => {
+    setShowDetails(val);
   };
   return (
     <>
-      {/* Opens modal for user to perform some action */}
-      {toggleModal && (
+      {/* Opens the add card form */}
+      {addCard && (
         <Modal>
-          <AddNewCard closeBtn={() => showModal(!toggleModal)} />
+          <AddNewCard closeBtn={() => showModal(!addCard)} />
+        </Modal>
+      )}
+      {/* Opens the show details modal */}
+      {showDetails && (
+        <Modal>
+          <CardDetails closeBtn={() => showCardDetails(!showDetails)} />
         </Modal>
       )}
       <h2 className={styles.header}>Cards</h2>
       <div className={styles.cards_container}>
-        <Card
-          cardType='/visa.svg'
-          cardBg='/card_template_1.svg'
-          isHome={false}
-        />
-        <Card
-          cardType='/mastercard.svg'
-          cardBg='/card_template_2.svg'
-          isHome={false}
-        />
-        <Card
-          cardType='/visa.svg'
-          cardBg='/card_template_3.svg'
-          isHome={false}
-        />
-        <Card
-          cardType='/mastercard.svg'
-          cardBg='/card_template_4.svg'
-          isHome={false}
-        />
-        <Card
-          cardType='/visa.svg'
-          cardBg='/card_template_5.svg'
-          isHome={false}
-        />
-        <Card
-          cardType='/mastercard.svg'
-          cardBg='/card_template_6.svg'
-          isHome={false}
-        />
-        <AddNewCardBtn onClick={() => showModal(!toggleModal)} />
+        {testCards.map((card, index: number) => {
+          return (
+            <Card
+              onClick={() => showCardDetails(!showDetails)}
+              cardType={card.cardType}
+              cardBg={card.cardBg}
+              isHome={false}
+              key={index}
+            />
+          );
+        })}
+        {/* Button to add a new card */}
+        <AddNewCardBtn onClick={() => showModal(!addCard)} />
       </div>
     </>
   );

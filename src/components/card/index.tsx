@@ -7,9 +7,9 @@ import styles from "./styles.module.css";
 import Logo from "../logo";
 import { CardPropsI } from "../interface";
 
-const Card = ({ isHome, cardBg, cardType }: CardPropsI) => {
+const Card = ({ isHome, cardBg, cardType, onClick }: CardPropsI) => {
   return (
-    <div className={styles.card_container}>
+    <div className={styles.container}>
       <Image
         src={cardBg}
         alt='Card template design'
@@ -19,7 +19,7 @@ const Card = ({ isHome, cardBg, cardType }: CardPropsI) => {
       />
       <div className={styles.card_details_group_one}>
         <p className={styles.card_name}>John Doe</p>
-        <button className={styles.view_card_details}>
+        <button onClick={onClick} className={styles.view_card_details}>
           <Image
             src='/settings.svg'
             alt='settings icon'
@@ -31,7 +31,7 @@ const Card = ({ isHome, cardBg, cardType }: CardPropsI) => {
       {!isHome && (
         <div className={styles.card_details_group_two}>
           <p className={styles.card_address}>
-            0x85807DC7cD410EFeFBA78e90087cc3ce9b9b7D0D
+            8897b5dbc8541ed446a5e59ffa62f39f5894fb9cee169ba85b5cfa436ae5ac41
           </p>
         </div>
       )}
