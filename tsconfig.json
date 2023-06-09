@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/index.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/index.ts", "flow/config.js"],
   "exclude": ["node_modules"]
 }
