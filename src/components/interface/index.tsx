@@ -64,3 +64,11 @@ export interface ModalPropsI {
 export interface AddNewCardPropsI {
   closeBtn?: React.MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface TransactionProviderPropsI {
+  children: React.ReactNode;
+}
+
+export interface AuthProviderPropsI {
+  children: React.ReactNode;
+}
