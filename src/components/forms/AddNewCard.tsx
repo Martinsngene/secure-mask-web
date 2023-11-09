@@ -1,8 +1,7 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import keccak256 from "keccak256";
 
 import styles from "./AddNewCard.module.css";
 import { SubmitBtn } from "@/components/buttons";
@@ -12,10 +11,25 @@ import { CardTypes } from "../constants";
 import { AddNewCardPropsI } from "../interface";
 
 const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
-  const hash = keccak256(
-    Buffer.from("John" + "Doe" + "08/23" + "Visa")
-  ).toString("hex");
-  console.log(hash);
+  // Store the state of the card detaiils
+
+  // Initial values for the fields
+  const initialValues = {
+    cardName: "",
+    expiryDate: "",
+    cardType: "",
+    cvvNumber: "",
+    cardNumber: "",
+  };
+  const [cardDetails, setCardDetails] = useState(initialValues);
+
+  const handleCardDetails = (e: any) => {
+    setCardDetails({
+      ...cardDetails,
+      [e.target.id]: e.target.value,
+    });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.form_container}>
@@ -35,7 +49,8 @@ const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
           Secure your card with an encrypted mask.
         </p>
         <div className={styles.name_container}>
-          <div className={styles.first_name}>
+          <div className={styles.item_one_container}>
+            {/* Card Name */}
             <label className={styles.label} htmlFor='cardName'>
               Card Name
             </label>
@@ -44,9 +59,11 @@ const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
               id='cardName'
               placeholder='Enter your card name'
               type='text'
+              onChange={(e) => handleCardDetails(e)}
             />
           </div>
-          <div className={styles.last_name}>
+          <div className={styles.item_two_container}>
+            {/* Expiry Date */}
             <label className={styles.label} htmlFor='expiryDate'>
               Expiry Date
             </label>
@@ -55,17 +72,24 @@ const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
               id='expiryDate'
               placeholder='Enter your expiry date'
               type='text'
+              onChange={(e) => handleCardDetails(e)}
             />
           </div>
         </div>
         <div className={styles.name_container}>
-          <div className={styles.first_name}>
+          <div className={styles.first_container}>
+            {/* Card Type */}
             <label className={styles.label} htmlFor='cardType'>
               Card Type
             </label>
-            <Select defaultValue='Visa' itemsList={CardTypes} />
+            <Select
+              defaultValue='Visa'
+              itemsList={CardTypes}
+              onChange={(e) => handleCardDetails(e)}
+            />
           </div>
-          <div className={styles.last_name}>
+          <div className={styles.item_two_container}>
+            {/* Card CVV */}
             <label className={styles.label} htmlFor='cvvNumber'>
               CVV
             </label>
@@ -74,10 +98,12 @@ const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
               id='cvvNumber'
               placeholder='Enter your cvv number'
               type='text'
+              onChange={(e) => handleCardDetails(e)}
             />
           </div>
         </div>
         <div>
+          {/* Card Number */}
           <label className={styles.label} htmlFor='cardNumber'>
             Card Number
           </label>
@@ -86,6 +112,7 @@ const AddNewCard = ({ closeBtn }: AddNewCardPropsI) => {
             id='cardNumber'
             placeholder='Enter your card number'
             type='text'
+            onChange={(e) => handleCardDetails(e)}
           />
         </div>
         <div>

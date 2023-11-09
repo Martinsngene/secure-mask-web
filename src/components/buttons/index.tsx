@@ -48,9 +48,9 @@ export const AddNewCardBtn = ({ onClick }: ButtonPropsI) => {
 };
 
 // Sign in with Google Button
-export const SignInWithGoogleBtn = ({ label }: ButtonPropsI) => {
+export const SignInWithGoogleBtn = ({ label, onClick }: ButtonPropsI) => {
   return (
-    <button className={styles.google_btn}>
+    <button onClick={onClick} className={styles.google_btn}>
       <Image
         src='/google.svg'
         alt='google icon'

@@ -2,12 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
+import { useSession, signIn } from "next-auth/react";
 
 import styles from "./styles.module.css";
 import { SignInWithGoogleBtn, SubmitBtn } from "@/components/buttons";
 import Logo from "@/components/logo";
 
 const SignIn = () => {
+  // Get Session
+  const { data: session } = useSession();
+
+  console.log(session);
+
   return (
     <div className={styles.container}>
       <div className={styles.form_container}>
@@ -31,7 +37,10 @@ const SignIn = () => {
         </div>
         <div>
           <SubmitBtn className='mb-8' label='Continue' />
-          <SignInWithGoogleBtn label='Sign in with Google' />
+          <SignInWithGoogleBtn
+            onClick={() => signIn()}
+            label='Sign in with Google'
+          />
         </div>
         <div className={styles.cta_container}>
           <p className={styles.cta}>Don&apos;t have an account? </p>

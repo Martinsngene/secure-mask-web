@@ -6,7 +6,7 @@
 
 /* Links Container */
 .links_container {
-  @apply text-[#1D1D1C] font-semibold hidden md:flex items-center justify-between lg:w-[60%] xl:w-[50%];
+  @apply text-[#1D1D1C] font-semibold hidden md:flex items-center justify-between w-[60%] xl:w-[50%];
 }
 
 /* Menu Container */

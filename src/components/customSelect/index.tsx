@@ -16,6 +16,7 @@ const Select = ({
   itemsList,
   label,
   labelStyles,
+  onChange,
 }: CustomSelectPropsI) => {
   const [currentItem, setCurrentItem] = useState(defaultValue);
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,9 @@ const Select = ({
       <div
         onClick={handleIsOpen}
         className={`${styles.dropDown} ${isOpen ? "border" : ""}`}>
-        <p className={styles.currentItem}>{currentItem}</p>
+        <p onChange={onChange} className={styles.currentItem}>
+          {currentItem}
+        </p>
         <button className={styles.selectBtn}>
           <img src='/down.svg' alt='arrow-right' width={15} height={15} />
         </button>

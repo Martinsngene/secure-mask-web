@@ -9,7 +9,6 @@ import { LinkItemPropsI } from "@/components/interface";
 import Cards from "@/components/dashboard_routes/Cards";
 import Transactions from "@/components/dashboard_routes/Transactions";
 import Profile from "@/components/dashboard_routes/Profile";
-import Logout from "@/components/dashboard_routes/Logout";
 import Link from "next/link";
 
 const Dashboard = () => {

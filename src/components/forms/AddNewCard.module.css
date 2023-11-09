@@ -42,8 +42,8 @@
 }
 
 /* First & Last Names Styles */
-.first_name,
-.last_name {
+.item_one_container,
+.item_two_container {
   @apply w-full lg:w-[45%];
 }
 

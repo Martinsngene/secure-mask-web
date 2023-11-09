@@ -1,24 +1,7 @@
-/** @format */
-import Head from "next/head";
+import React from "react";
 
-import Landing from "@/components/landing";
-import Transaction from "@/components/transcation";
+const Demo = () => {
+  return <div>Demo</div>;
+};
 
-export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>FCL Quickstart with NextJS</title>
-        <meta name='description' content='My first web3 app on Flow!' />
-        <link rel='icon' href='/favicon.png' />
-      </Head>
-
-      <main>
-        <Transaction />
-        <div className='grid'>
-          <Landing />
-        </div>
-      </main>
-    </div>
-  );
-}
+export default Demo;

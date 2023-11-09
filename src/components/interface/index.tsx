@@ -52,6 +52,7 @@ export interface CustomSelectPropsI {
   label?: string;
   labelStyles?: string;
   containerStyles?: string;
+  onChange?: React.FormEventHandler<HTMLParagraphElement>;
 }
 
 // Interface for Modal
