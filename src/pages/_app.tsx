@@ -1,4 +1,4 @@
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
@@ -10,10 +10,10 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-    <SessionProvider session={session}>
-      <div className={`${inter.className}`}>
-        <Component {...pageProps} />
-      </div>
-    </SessionProvider>
+    // <SessionProvider session={session}>
+    <div className={`${inter.className}`}>
+      <Component {...pageProps} />
+    </div>
+    // </SessionProvider>
   );
 }

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useSession, signIn } from "next-auth/react";
+// import { useSession, signIn } from "next-auth/react";
 
 import styles from "./styles.module.css";
 import { SignInWithGoogleBtn, SubmitBtn } from "@/components/buttons";
@@ -10,9 +10,9 @@ import Logo from "@/components/logo";
 
 const SignIn = () => {
   // Get Session
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
-  console.log(session);
+  // console.log(session);
 
   return (
     <div className={styles.container}>
@@ -38,7 +38,7 @@ const SignIn = () => {
         <div>
           <SubmitBtn className='mb-8' label='Continue' />
           <SignInWithGoogleBtn
-            onClick={() => signIn()}
+            // onClick={() => signIn()}
             label='Sign in with Google'
           />
         </div>
