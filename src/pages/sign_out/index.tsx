@@ -14,7 +14,7 @@ const SignOut = () => {
         <div className={styles.logo_container}>
           <Logo />
         </div>
-        <h1 className={styles.header}>You're now logged out</h1>
+        <h1 className={styles.header}>You&apos;re now logged out</h1>
         <p className={styles.welcome_text}>We hope you enjoyed our services.</p>
 
         <div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { CustomSelectPropsI } from "../interface";
+import Image from "next/image";
 
 /*
 - onClick of the button the section is set to display and shows with a list of items
@@ -40,7 +41,7 @@ const Select = ({
           {currentItem}
         </p>
         <button className={styles.selectBtn}>
-          <img src='/down.svg' alt='arrow-right' width={15} height={15} />
+          <Image src='/down.svg' alt='arrow-right' width={15} height={15} />
         </button>
       </div>
       {isOpen && (
